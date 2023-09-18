@@ -13,16 +13,20 @@
 #navbar {
     display: flex;
     align-items: center;
+    position: relative;
+    top: 0px;
 }
 
 #navbar::before {
+    top: 0px;
+    left: 0px;
     content: "";
     background-color: black;
     position: absolute;
     height: 100%;
     width: 100%;
     z-index: -1;
-    opacity: 0.9;
+    opacity: 0.68;
 }
 
 /* Navigation Bar: Logo and image */
@@ -37,9 +41,6 @@
 }
 
 /* Navigation Bar: List Styling */
-#navbar {
-    position: relative;
-}
 
 #navbar ul {
     display: flex;
@@ -67,7 +68,7 @@
 }
 
 /* Home Section */
-#home{
+#home {
     display: flex;
     flex-direction: column;
     padding: 3px 200px;
@@ -78,49 +79,141 @@
 
 #home::before {
     content: "";
-    background:url('/bg_logo_img/bg.jpg') no-repeat center center/cover;
+    top: 0px;
+    left: 0px;
+    background: url('/bg_logo_img/bg.jpg') no-repeat center center/cover;
     position: absolute;
-    height: 89%;
+    height: 500px;
     width: 100%;
     z-index: -1;
     opacity: 0.89;
 }
 
-#home h1{
-    color:white;
+#home h1 {
+    color: white;
     text-align: center;
     font-family: 'Lilita One', cursive;
     font-weight: bold;
 }
-#home p{
-    color:white;
+
+#home p {
+    color: whitesmoke;
     text-align: center;
     font-size: 1.5rem;
-    font-family: 'Lilita One', cursive;
+    font-family: 'Itim', cursive;
 }
+
 /* Services Section */
-#services{
+#services {
     margin: 34px;
+    padding: 0px;
     display: flex;
 }
-#services .box{
+
+#services .box {
     border: 2px solid brown;
-}
-#services .box img{
-    height: 160px;
+    padding: 34px;
+    margin: 3px 6px;
+    border-radius: 25px;
+    background-color: #71ddba57;
 }
 
+#services .box img {
+    height: 160px;
+    display: block;
+    margin: auto;
+}
+
+#services-container h1 {
+    text-align: center;
+    color: black;
+    font-family: 'Lilita One', cursive;
+}
+
+#services .box p {
+    font-family: 'Itim', cursive;
+}
+
+/* Clients Section */
+#client-section {
+    position: relative;
+    height: 344px;
+}
+#client-section::before{
+    left: 0px;
+    content: "";
+    position: absolute;
+    background: url('/bg_logo_img/bg1.jpg') no-repeat center center/cover;
+    width: 100%;
+    height: 360px;
+    z-index: -1;
+    opacity: 0.7;
+}
+
+#clients {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#clients img {
+    height: 200px;
+    margin: 12px;
+}
+
+/* Contact Section */
+#contact{
+    margin: 17px;
+    position: relative;
+}
+#contact::before{
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 581px;
+    z-index: -2;
+    opacity: 0.7;
+    background: url('/bg_logo_img/contact.jpg') no-repeat center center/cover;
+
+}
+#contact-box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 34px;
+}
+#contact-box input, #contact-box textarea{
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 9px;
+    font-size: 1.1rem;
+}
+#contact-box form{
+    width: 40%;
+}
+#contact-box label{
+    font-size: 1.3rem;
+    font-family: 'Itim', cursive;
+}
+footer{
+    background: black;
+    color: white;
+    padding: 9px 20px;
+}
 /* Utility classes */
-.h-primary{
+.h-primary {
     font-size: 3.8rem;
     padding: 12px;
-}
-.h-secondary{
-    font-size: 2.8rem;
-    padding: 12px;
+    font-family: 'Lilita One', cursive;
 }
 
-.btn{
+.h-secondary {
+    font-size: 2.1rem;
+    padding: 12px;
+    font-family: 'Lilita One', cursive;
+}
+
+.btn {
     padding: 6px 20px;
     border: 2px solid white;
     background-color: #8b953f;
@@ -129,10 +222,11 @@
     font-size: 1.118rem;
     cursor: pointer;
 }
-.btn:hover{
+
+.btn:hover {
     background-color: #8f9568;
 }
 
-.center{
+.center {
     text-align: center;
 }
